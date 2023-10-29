@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+        <header>
+            <div class="logo_container">
+                <img src="shield_check.png" alt="Our Logo">
+                <a href="#" class="logo">Cyber Safe Clicks</a>
+            </div>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Recent Scans</a></li>
+                </ul>
+        </header>
+
+        <div class="submission-container">
+            <label for="submission-text" class="submission-label">Enter URL Here:</label>
+            <div class="input-button-container">
+                <div class="input-container">
+                    <textarea id="submission-text" class="submission-text" rows="4" cols="20"></textarea>
+                    <button class="confirmation-button">Confirm</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="submission-container-2">
+        <h1>The Link You Uploaded is SAFE!</h1>
+        </div>
+
+</body>
+</html>
