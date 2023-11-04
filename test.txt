@@ -1,0 +1,32 @@
+import re
+import requests
+
+# List of known phishing domains (you should maintain/update this list)
+phishing_domains = ["example-phishing.com", "phish-example.net", "abuse.ch", "isc.sans.edu", "malwaredomains.com", "networksec.org", "c-tl [.]xyz"]
+
+# Function to check if a URL is a phishing URL
+def is_phishing_url(url):
+    # Extract the domain from the URL
+    match = re.search(r'://(www\.)?([^/]+)', url)
+    if match:
+        domain = match.group(2)
+        # Check if the domain is in the list of known phishing domains
+        if domain in phishing_domains:
+            return True
+    return False
+
+# Example URL to test
+url_to_check = "http://example-phishing.com/login"
+
+if is_phishing_url(url_to_check):
+    print(f"{url_to_check} is a phishing URL.")
+else:
+    print(f"{url_to_check} is not a phishing URL.")
+
+# Example URL that is not in the list
+url_to_check = "http://legit-example.com/login"
+
+if is_phishing_url(url_to_check):
+    print(f"{url_to_check} is a phishing URL.")
+else:
+    print(f"{url_to_check} is not a phishing URL.")
